@@ -9,22 +9,24 @@ var ClockState = {
   componentDidMount: function() {
     setInterval(this.setCurrentTime, 1000);
   },
-  getCurrentHour: function(){
-    return this.state.currentDate.getHours();
+  getCurrentHour: function(hourMode){
+    return this.state.currentDate.getHours() % hourMode;
   },
   getCurrentMinute: function(){
-    return this.state.currentDate.getMinutes();
+    var minutes = this.state.currentDate.getMinutes();
+    return (minutes < 10 ? "0" + minutes : minutes);
   },
   getCurrentSecond: function(){
-    return this.state.currentDate.getSeconds();
+    var seconds = this.state.currentDate.getSeconds();
+    return (seconds < 10) ? "0" + seconds : seconds;
   },
   setCurrentTime: function(){
     this.setState({
       currentDate: new Date()
     });
   },
-  formattedTime: function(){
-    return this.getCurrentHour() + ':' + this.getCurrentMinute() + ':' +  this.getCurrentSecond();
+  formattedTime: function(opts={hourMode:24}){
+    return this.getCurrentHour(opts.hourMode) + ':' + this.getCurrentMinute() + ':' +  this.getCurrentSecond();
   }
 };
 
