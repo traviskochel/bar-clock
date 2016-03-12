@@ -3,13 +3,14 @@ var React = require('react');
 var ClockState = {
   getInitialState: function() {
     return {
-      currentDate: new Date()
+      currentDate: new Date(),
+      defaultHourMode: 12
     };
   },
   componentDidMount: function() {
     setInterval(this.setCurrentTime, 1000);
   },
-  getCurrentHour: function(hourMode){
+  getCurrentHour: function(hourMode = this.state.defaultHourMode){
     return this.state.currentDate.getHours() % hourMode;
   },
   getCurrentMinute: function(){
@@ -25,7 +26,7 @@ var ClockState = {
       currentDate: new Date()
     });
   },
-  formattedTime: function(opts={hourMode:24}){
+  formattedTime: function(opts={hourMode: this.state.defaultHourMode}){
     return this.getCurrentHour(opts.hourMode) + ':' + this.getCurrentMinute() + ':' +  this.getCurrentSecond();
   }
 };

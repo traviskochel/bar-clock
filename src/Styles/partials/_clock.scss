@@ -1,0 +1,34 @@
+html, body {
+  min-height: 100%;
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+body {
+  background-color: $color-dark;
+  color: $color-light;
+}
+
+.clock {
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+
+.clock--hours {
+  @include clearfix;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  
+}
+
+.clock--hourBar {
+  flex: 1;
+  background-color: $color-gray-dk;
+  margin: 10px;
+}

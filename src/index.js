@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './Components/App';
+import ClockWrapper from './Components/ClockWrapper';
 import Styles from './Styles/main.scss';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<ClockWrapper />, document.getElementById('root'));
