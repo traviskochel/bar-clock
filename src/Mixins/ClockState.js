@@ -11,7 +11,12 @@ var ClockState = {
     setInterval(this.setCurrentTime, 1000);
   },
   getCurrentHour: function(hourMode = this.state.defaultHourMode){
-    return this.state.currentDate.getHours() % hourMode;
+    var hour = this.state.currentDate.getHours() % hourMode;
+    
+    if (hour == 0) {
+      hour = 12;
+    }
+    return hour;
   },
   getCurrentMinute: function(){
     return this.state.currentDate.getMinutes();
