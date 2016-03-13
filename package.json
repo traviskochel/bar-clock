@@ -4,7 +4,8 @@
   "description": "Simple Line Clock",
   "scripts": {
     "start": "node server.js",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "deploy": "surge ./"
   },
   "repository": {
     "type": "git",
