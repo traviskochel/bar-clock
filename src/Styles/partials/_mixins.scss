@@ -16,3 +16,8 @@
     *zoom: 1;
   }
 }
+
+@keyframes cycling-bg-color {
+  0% {background-color: $color-red;}
+  100% {background-color: $color-blue;}
+}

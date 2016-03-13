@@ -15,7 +15,9 @@ var MinuteBar = React.createClass({
         top: (100 - (currentSecondInHour / secondsInHour * 100))+'%' 
       }
     } else {
-      return {display: 'none'}
+      return {
+        top: 100 + '%'
+      }
     }
   },
   render: function() {

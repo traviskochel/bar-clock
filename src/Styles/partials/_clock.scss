@@ -31,12 +31,24 @@ body {
   background-color: $color-gray-dk;
   margin: 10px;
   position: relative;
+  border-radius: 3px;
 }
 
 .clock--minuteBar {
+  transition: top 1s linear;
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: $color-red;
+  top: 100%;
+  border-radius: 3px;
+}
+
+@for $i from 0 through 11 {
+  $duration: ($i / 11 * 10) + 20;
+  .clock--hourBar-#{$i} {
+    .clock--minuteBar {
+      animation: cycling-bg-color #{$duration}s linear infinite alternate;
+    }
+  }
 }
