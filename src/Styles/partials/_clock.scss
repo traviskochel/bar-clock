@@ -42,13 +42,14 @@ body {
   bottom: 0;
   top: 100%;
   border-radius: 3px;
+  animation: cycling-bg-color 20s linear infinite alternate;
 }
 
-@for $i from 0 through 11 {
-  $duration: ($i / 11 * 10) + 20;
-  .clock--hourBar-#{$i} {
-    .clock--minuteBar {
-      animation: cycling-bg-color #{$duration}s linear infinite alternate;
-    }
-  }
-}
+// @for $i from 0 through 11 {
+//   $duration: ($i / 11 * 10) + 20;
+//   .clock--hourBar-#{$i} {
+//     .clock--minuteBar {
+//       animation: cycling-bg-color #{$duration}s linear infinite alternate;
+//     }
+//   }
+// }
