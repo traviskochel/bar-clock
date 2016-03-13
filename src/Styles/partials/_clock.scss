@@ -31,4 +31,14 @@ body {
   flex: 1;
   background-color: $color-gray-dk;
   margin: 10px;
+  position: relative;
+}
+
+.clock--minuteBar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background-color: $color-red;
 }

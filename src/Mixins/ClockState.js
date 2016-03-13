@@ -14,12 +14,10 @@ var ClockState = {
     return this.state.currentDate.getHours() % hourMode;
   },
   getCurrentMinute: function(){
-    var minutes = this.state.currentDate.getMinutes();
-    return (minutes < 10 ? "0" + minutes : minutes);
+    return this.state.currentDate.getMinutes();
   },
   getCurrentSecond: function(){
-    var seconds = this.state.currentDate.getSeconds();
-    return (seconds < 10) ? "0" + seconds : seconds;
+    return this.state.currentDate.getSeconds();
   },
   setCurrentTime: function(){
     this.setState({
