@@ -21,6 +21,7 @@ var HourBar = React.createClass({
       <div className='clock--hourBar'>
         <MinuteBar 
           currentMinute={this.props.currentMinute}
+          currentSecond={this.props.currentSecond}
           barStatus={this.barStatus()} />
       </div>
     );

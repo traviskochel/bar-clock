@@ -9,8 +9,10 @@ var MinuteBar = React.createClass({
     if (this.props.barStatus == 'past') {
       return {top: 0}
     } else if (this.props.barStatus == 'current') {
+      var secondsInHour = 3600;
+      var currentSecondInHour = (this.props.currentMinute * 60) + this.props.currentSecond;
       return {
-        top: (this.props.currentMinute / 60 * 100)+'%' 
+        top: (100 - (currentSecondInHour / secondsInHour * 100))+'%' 
       }
     } else {
       return {display: 'none'}

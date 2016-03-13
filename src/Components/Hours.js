@@ -16,7 +16,8 @@ var Hours = React.createClass({
           key={'hour-' + hour}
           index={hour}
           currentHour={_this.props.currentHour}
-          currentMinute={_this.props.currentMinute} />
+          currentMinute={_this.props.currentMinute}
+          currentSecond={_this.props.currentSecond} />
       );
     });
     return hourBars;

@@ -10,7 +10,8 @@ var ClockWrapper = React.createClass({
       <div className='clock'>
         <Hours 
           currentHour={this.getCurrentHour()}
-          currentMinute={this.getCurrentMinute()} />
+          currentMinute={this.getCurrentMinute()}
+          currentSecond={this.getCurrentSecond()} />
       </div>
     );
   }
